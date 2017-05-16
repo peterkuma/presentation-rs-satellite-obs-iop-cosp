@@ -1,0 +1,13 @@
+pandoc \
+    --latex-engine xelatex \
+    --slide-level 2 \
+    -t beamer \
+    --template template/default.beamer \
+    -Vtitle= \
+    -Vtheme=default \
+    -Vsansfont='Myriad Pro' \
+    -Vfontsize=12pt \
+    -o presentation.pdf \
+    presentation.md
+
+pdftk title.pdf presentation.pdf footer.pdf cat output presentation_FINAL.pdf
